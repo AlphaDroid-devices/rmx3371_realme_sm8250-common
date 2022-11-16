@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
     init.oplus.hw.rc.recovery \
     init.oplus.rc \
     init.oplus.sh \
+    init.oplus.touch.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
