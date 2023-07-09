@@ -11,10 +11,10 @@ persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
-persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.spv3.enable=true
-persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio.voicecall.speaker.stereo=false
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
@@ -25,7 +25,7 @@ vendor.audio.feature.anc_headset.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.battery_listener.enable=true
 vendor.audio.feature.compr_cap.enable=false
-vendor.audio.feature.compr_voip.enable=false
+vendor.audio.feature.compr_voip.enable=true
 vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
@@ -115,12 +115,14 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
+
 # HWUI
 ro.hwui.render_ahead=20
 
 # Camera
 vendor.camera.algo.jpeghwencode=0
 vendor.camera.aux.packagelist=android,com.oneplus.camera
+
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -131,11 +133,10 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 ro.vendor.display.sensortype=2
-vendor.display.enable_async_powermode=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_system_load_check=1
-vendor.display.enable_async_powermode=0
+vendor.display.enable_async_powermode=1
 vendor.display.enable_camera_smooth=1
 vendor.display.not_switch_qhd_120hz=1
 vendor.display.primary_mixer_stages=9
@@ -144,6 +145,7 @@ vendor.display.smomo_camera_support=1
 vendor.display.smomo_game_support=0
 vendor.display.use_layer_ext=1
 vendor.display.use_smooth_motion=1
+vendor.display.defer_fps_frame_count=2
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
@@ -151,7 +153,7 @@ persist.vendor.dpmhalservice.enable=1
 # Dolby
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
-ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
+ro.vendor.dolby.dax.version=DAX3_3.5.1.28_r1
 ro.vendor.product.device.db=OP_DEVICE
 ro.vendor.product.manufacturer.db=OP_PHONE
 vendor.product.device=OP_PHONE
@@ -165,6 +167,8 @@ drm.service.enabled=true
 
 # Fingerprint
 persist.vendor.qfp=true
+persist.vendor.fp.template_updateflag=V1
+
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -173,8 +177,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.sf.oplus.bindbigcore=1
-
 debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
@@ -182,6 +184,7 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
 debug.sf.latch_unsignaled=1
+debug.sf.oplus.bindbigcore=1
 persist.sys.sf.color_saturation=1.0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -189,18 +192,29 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_display_power_timer_ms=700
-ro.surface_flinger.set_idle_timer_ms=1800000
-ro.surface_flinger.set_touch_timer_ms=10
-ro.surface_flinger.set_idle_timer_ms=4000
+ro.surface_flinger.set_idle_timer_ms=1500
+ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.surface_flinger.set_display_power_timer_ms=700
 vendor.opengles.version=196610
 
 # Incremental FS
 ro.incremental.enable=yes
+
+# FS-verity
+ro.apk_verity.mode=2
+
+# LMK
+ro.config.low_ram=false
+ro.lmk.filecache_min_kb=153600
+ro.lmk.use_minfree_levels=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
+
 
 # Media
 debug.stagefright.ccodec=4
@@ -209,6 +223,8 @@ debug.stagefright.omx_default_rank=0
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 

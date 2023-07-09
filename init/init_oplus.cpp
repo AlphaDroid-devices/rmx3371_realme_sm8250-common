@@ -43,7 +43,7 @@ void vendor_load_properties() {
     if (rf_version != 1){
         OverrideProperty("ro.boot.product.hardware.sku", "nfc");
     }
-
+    
     if (std::string content; ReadFileToString("/proc/devinfo/ddr_type", &content)) {
         OverrideProperty("ro.boot.ddr_type", Split(Trim(content), "\t").back().c_str());
     }
