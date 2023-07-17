@@ -121,8 +121,7 @@ ro.hwui.render_ahead=20
 
 # Camera
 vendor.camera.algo.jpeghwencode=0
-vendor.camera.aux.packagelist=android,com.oneplus.camera
-
+vendor.camera.aux.packagelist=com.oplus.camera
 
 # Chipset
 ro.soc.manufacturer=QTI
