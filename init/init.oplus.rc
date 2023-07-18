@@ -128,11 +128,6 @@ on property:sys.boot_completed=1
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
-     # Widevine
-    copy /vendor/etc/oplus_Widevine_licenses.pfm /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
-    chown system system /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pf
-
-
 on property:vendor.post_boot.parsed=1
     # IRQ Tuning
     # IRQ 299: msm_drm
