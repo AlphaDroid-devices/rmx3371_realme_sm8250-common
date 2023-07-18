@@ -7,7 +7,7 @@
 <resources>
 
     <!-- Color of the UDFPS Pressed view -->
-    <color name="config_udfpsColor">##00ffffff</color>
+    <color name="config_udfpsColor">#00ffffff</color>
 
     <!-- The battery current divider, some kernel report current value in mA other in µA.
          Leave 1 if you have mA, put 1000 if you have µA-->
