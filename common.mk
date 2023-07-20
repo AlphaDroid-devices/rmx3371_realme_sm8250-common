@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.oplus
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.oplus
+
 
 # Remove Packages for Dolby Support
 PRODUCT_PACKAGES += \
@@ -346,22 +350,24 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libmm-omxcore \
     libstagefrighthw
+
+# OPlusExtras
+PRODUCT_PACKAGES += \
+    OPlusExtras \
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-blaze
-
+    $(LOCAL_PATH)/overlay-bliss
+    
+PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    AospFrameworksResCommon \
-    AospSettingsProviderResCommon \
-    AospSettingsResCommon \
-    AospSystemUIResCommon \
-    FaceUnlockServiceResCommon \
     FrameworksResTarget \
+    OPlusExtrasResCommon \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
