@@ -200,10 +200,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxservice.xml
 
 
-# Preopt SystemUI
+
+# ART
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.systemuicompilerfilter=speed
+
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
-    SystemUI
+    SystemUI \
+    Launcher3QuickStep
 
 
 # DRM
