@@ -208,14 +208,6 @@ ro.incremental.enable=yes
 # FS-verity
 ro.apk_verity.mode=2
 
-# LMK
-ro.config.low_ram=false
-ro.lmk.filecache_min_kb=153600
-ro.lmk.use_minfree_levels=true
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=50
-ro.lmk.stall_limit_critical=40
-
 
 # Media
 debug.stagefright.ccodec=4
@@ -226,8 +218,10 @@ ro.netflix.bsp_rev=Q8250-19134-1
 
 # Multi-Gen LRU
 persist.device_config.mglru_native.lru_gen_config=core
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.vendor.radio.apm_sim_not_pwdn=1
