@@ -209,7 +209,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
-    android.hardware.drm@-service.clearkey
+    android.hardware.drm-service.clearkey
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -277,6 +277,7 @@ PRODUCT_PACKAGES += \
     init.oplus.sh \
     init.oplus.touch.rc \
     init.aosp.rc \
+    init.oplus_extras.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
@@ -362,7 +363,7 @@ $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-bliss
-    
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \

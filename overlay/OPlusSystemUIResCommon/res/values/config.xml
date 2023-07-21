@@ -4,16 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
-      <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
-    <bool name="config_roundedCornerMultipleRadius">true</bool>
     
-    <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">75</integer>
-
-    <!-- Margin on the bottom of the charging indicator on Keyguard -->
-    <dimen name="keyguard_indication_margin_bottom">3dp</dimen>
-
      <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
           vibrator is capable of subtle vibrations -->
      <bool name="config_vibrateOnIconAnimation">true</bool>
@@ -33,5 +24,8 @@
     <!-- The battery current divider, some kernel report current value in mA other in µA.
          Leave 1 if you have mA, put 1000 if you have µA -->
     <integer name="config_battCurrentDivider" translatable="false">1</integer>
+
+   <!-- Whether show refresh rate QS tile -->
+    <bool name="config_showRefreshRateQsTile">true</bool>
 
 </resources>
