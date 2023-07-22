@@ -14,7 +14,7 @@ persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.spv3.enable=true
-persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio.voicecall.speaker.stereo=false
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
@@ -131,6 +131,8 @@ ro.soc.model=SM8250
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
 ro.vendor.display.sensortype=2
