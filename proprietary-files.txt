@@ -1164,6 +1164,9 @@ vendor/lib/libmulawdec.so
 
 
 # Media
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_kona.xml
+vendor/etc/media_profiles_vendor.xml
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
@@ -1173,10 +1176,13 @@ vendor/etc/media_codecs_kona_vendor.xml
 vendor/etc/media_codecs_performance_kona.xml
 vendor/etc/media_codecs_performance_kona_vendor.xml
 vendor/etc/media_codecs_vendor_audio.xml
-vendor/etc/media_profiles.xml
-vendor/etc/media_profiles_kona.xml
+odm/etc/seccomp_policy/codec2.vendor.base.policy
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/system_properties.xml
-vendor/lib/libqc2vppfilter.so
+vendor/lib/libmmosal.so
+vendor/lib/libqc2vppfilter.so|d383415a845b669ea8d6cb0822b3765183231782
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_core.so
@@ -1184,6 +1190,14 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
+vendor/lib64/libqc2vppfilter.so|07216c66eeb283096a4da88105ec06aefbf41bf6
+
 
 # Native public libraries
 vendor/etc/public.libraries.txt
