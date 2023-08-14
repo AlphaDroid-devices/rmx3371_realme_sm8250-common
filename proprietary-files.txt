@@ -1518,9 +1518,6 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
 -vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
 
-# Thermal engine - from LA.UM.9.12.r1-14100-SMxx50.0
-vendor/bin/thermal-engine|63eaafcd66f41133cc721e6dacffb718b7868034
-
 # Time services
 vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
