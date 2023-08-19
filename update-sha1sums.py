@@ -21,7 +21,7 @@ import sys
 from hashlib import sha1
 
 device = 'sm8250-common'
-vendor = 'oneplus'
+vendor = 'realme'
 
 with open('proprietary-files.txt', 'r') as f:
     lines = f.read().splitlines()
