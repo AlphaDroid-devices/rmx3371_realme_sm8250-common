@@ -47,6 +47,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.realme.rc",
+    src: "init.realme.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.recovery.rc",
     src: "init.qcom.recovery.rc",
     sub_dir: "init",
@@ -96,12 +103,6 @@ sh_binary {
 sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "init.qcom.early_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kona.post_boot.sh",
-    src: "init.kona.post_boot.sh",
     vendor: true,
 }
 

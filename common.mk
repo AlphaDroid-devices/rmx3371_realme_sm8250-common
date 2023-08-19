@@ -289,8 +289,8 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.oplus.hw.rc \
     init.oplus.hw.rc.recovery \
-    init.kona.post_boot.sh \
     init.oplus.rc \
+    init.realme.rc \
     init.oplus.sh \
     init.oplus.touch.rc \
     init.aosp.rc \
