@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audio_amplifier.kona \
+    libaudiopreprocessing \
     liba2dpoffload \
     libbatterylistener \
     libcomprcapture \
