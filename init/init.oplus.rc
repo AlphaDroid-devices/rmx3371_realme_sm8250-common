@@ -38,7 +38,7 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys11/restart_level RELATED
 
 on boot
-# Charger
+    # Charger
     chown system system /proc/charger/charger_factorymode_test
     chown system system /proc/charger/integrate_gauge_fcc_flag
     chown system system /proc/charger/hmac
@@ -77,6 +77,10 @@ on boot
     chown system system /sys/class/power_supply/battery/smooth_switch
     chown system system /sys/class/power_supply/battery/soc_notify_ready
     chown system system /sys/class/power_supply/battery/soc_reporting_ready
+
+    chown system system /sys/class/oplus_chg/usb/otg_switch
+    chown system system /sys/class/power_supply/usb/otg_switch
+    chown system system /sys/class/power_supply/usb/type
 
 
     # Display
