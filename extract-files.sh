@@ -63,6 +63,9 @@ function blob_fixup() {
         odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service)
             grep -q libshims_fingerprint.oplus.so "${2}" || "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
             ;;
+        odm/lib64/libui.so)
+            patchelf --replace-needed "android.hardware.graphics.common-V1-ndk_platform.so" "android.hardware.graphics.common-V1-ndk.so" "${2}"
+            ;;    
         odm/etc/init/wlchgmonitor.rc)
             sed -i "/disabled/d;/seclabel/d" "${2}"
             ;;
@@ -91,6 +94,10 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "1F 0A 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+        vendor/lib/libgui1_vendor.so)
+            patchelf --replace-needed "libui.so" "libui-v30.so" "${2}"
+            ;;
+
     esac
 }
 

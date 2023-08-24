@@ -280,6 +280,7 @@ odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libextcamera_client.so
+vendor/lib/libgui1_vendor.so
 vendor/lib/vendor.oplus.hardware.extcamera@1.0.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
 vendor/lib64/hw/camera.qcom.so
@@ -1282,6 +1283,7 @@ vendor/lib64/libspcom.so
 
 # Perf
 odm/lib64/vendor.oplus.hardware.performance@1.0.so
+vendor/lib/vendor.oplus.hardware.performance@1.0.so
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/perf/commonresourceconfigs.xml
@@ -1289,7 +1291,6 @@ vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/powerhint.xml
 vendor/etc/smomo_setting.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
